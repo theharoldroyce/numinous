@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+@layer base{
+    @font-face {
+      font-family: "sf-bold";
+      src: url('./fonts/sf-bold.woff') format('woff');
+    }
+    @font-face {
+      font-family: "sf-medium";
+      src: url('./fonts/sf-medium.woff') format('woff');
+    }
+    @font-face {
+      font-family: "sf-regular";
+      src: url('./fonts/sf-regular.woff') format('woff');
+    }
+  }
+
+  @layer components{
+    .h1{
+      @apply text-2xl font-sfbold cursor-pointer ml-2 tracking-wide;
+    }
+    .h2{
+      @apply text-xl font-sfbold px-3 cursor-pointer capitalize tracking-wider hover:scale-105 duration-200 hover:text-[#14FFEC];
+    }
+    .h3{
+      @apply text-3xl font-sfbold px-3 py-3 cursor-pointer capitalize tracking-wide hover:scale-105 duration-200 hover:text-[#14FFEC];
+    }
+    .title{
+      @apply text-center text-xl md:text-xl lg:text-3xl font-sfbold tracking-widest text-[#14FFEC] ;
+    }
+    .subtitle{
+      @apply text-center text-xs md:text-base lg:text-xl font-sfreg tracking-widest text-[#FFFFFF] px-16 py-5 md:px-28 lg:px-48 lg:py-16 xl:px-56 xl:py-16;
+    }
+    .card{
+      @apply justify-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 px-14 border-white;
+    }
+    .card2{
+      @apply md:w-11/12 py-5 justify-items-center shadow-lg hover:scale-105 duration-500 rounded-lg shadow-[#14FFEC];
+    }
+    .cardtext{
+      @apply text-center mt-2 font-sfreg text-xs lg:text-base text-[#FFFFFF];
+    }
+    .card3{
+      @apply justify-items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-14;
+    }
+    .card3sub{
+      @apply md:w-11/12 shadow-lg hover:scale-105 duration-500 rounded-lg shadow-[#14FFEC] px-2;
+    }
+    .ptitle{
+      @apply py-3 px-2 text-center text-[#0D7377] text-lg lg:text-2xl font-sfbold;
+    }
+    .psub{
+      @apply py-3 px-5 text-sm md:text-base text-center  text-white;
+    }
+    .p{
+      @apply text-sm md:text-base text-center font-sfbold text-[#0D7377];
+    }
+    .pt{
+      @apply px-2 pt-2 text-center text-lg lg:text-2xl font-sfbold text-[#14FFEC];
+    }
+    .pcont{
+      @apply text-sm md:text-base text-center text-white font-sfreg px-3 pb-3;
+    }
+    .cardd3{
+      @apply  grid grid-cols-1 md:grid-cols-3 gap-5 px-5;
+    }
+  }
