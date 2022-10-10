@@ -48,11 +48,11 @@ export default class Testimonials extends Component {
       <div className='overflow-hidden'>
       <div>
         <Slider {...settings}>
-        {testimonials .map(({id,title,sub}) =>(
-            <div className='w-5/12 px-11 md:px-40 lg:px-72'>
-               <div key={id} className='items-center text-center text-white text-md'>
-                  <p>{title}</p>
-                  <p>{sub}</p>
+        {testimonials .map((obj) =>(
+            <div key={obj.id} className='w-5/12 px-11 md:px-40 lg:px-72'>
+               <div className='items-center text-center text-white text-md'>
+                  <p>{obj.title}</p>
+                  <p>{obj.sub}</p>
                 </div>
             </div>
            ))}

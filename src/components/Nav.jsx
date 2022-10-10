@@ -1,4 +1,5 @@
 import {React,useState} from 'react'
+import { Link } from "react-router-dom";
 import Logo from '../assets/logo.jpg'
 import { FaBars, FaTimes } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
@@ -28,31 +29,33 @@ const Nav = () => {
           },
     ]
   return (
-    <div className='flex justify-between items-center w-full h-20 px-4 bg-[#323232] text-[#FFFFFF]'>
-        <div className='inline-flex item-center hover:scale-105 duration-200 hover:text-[#14FFEC]'>
-           <img className='h-7 w-7 rounded-md'src={Logo} alt='/'/>
-           <h1 className='h1'>NUMINOUS</h1>
+
+    <div className='nav'>
+        <div className='logo'>
+        <Link to='/'><img className='h-7 w-7 rounded-md'src={Logo} alt='/'/></Link>
+        <Link to='/'><h1 className='h1'>NUMINOUS</h1></Link>
         </div>
         <ul className='hidden  md:flex'>
-           {navmenu.map(({id,link}) => (            
-              <li key={id} className='h2'>{link}</li>
+           {navmenu.map((obj) => (            
+             <Link key={obj.id} to={obj.link} ><li className='h2'>{obj.link}</li></Link> 
            ))}
-            <li className='h2'><CgProfile size={30}/></li>
+           <Link to='/loginsignin'><li className='h2'><CgProfile size={30}/></li></Link>
         </ul>
 
-        <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10  md:hidden'>
+        <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 md:hidden'>
            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
 
         {nav && (
-            <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen text-[#323232] '>
-                {navmenu.map(({id,link}) =>(
-                    <li key={id} className='h3'>{link}</li>
+            <ul className='navmobile'>
+                {navmenu.map((obj) =>(
+                   <Link key={obj.id} to={obj.link}> <li className='h3'>{obj.link}</li> </Link> 
                 ))}
                    <li className='h3'><CgProfile size={45}/></li>
             </ul>
         )}
    </div>
+
   )
 }
 

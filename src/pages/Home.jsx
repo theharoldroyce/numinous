@@ -1,11 +1,15 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import Herobody from '../components/Herobody'
+
+
 
 const Home = () => {
   return (
-    <section>
+    <>
+      <Herobody/>
       <Hero/>
-    </section>
+    </>
   )
 }
 

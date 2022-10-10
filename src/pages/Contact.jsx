@@ -1,8 +1,13 @@
 import React from 'react'
+import Contactcard from '../components/Contactcard'
+import Contacthead from '../components/Contacthead'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <section>
+      <Contacthead/>
+      <Contactcard/>
+    </section>
   )
 }
 

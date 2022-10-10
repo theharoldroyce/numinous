@@ -1,8 +1,11 @@
 import React from 'react'
+import Shop from '../components/Shop'
 
 const Merch = () => {
   return (
-    <div>Merch</div>
+    <div>
+      <Shop/>
+    </div>
   )
 }
 
