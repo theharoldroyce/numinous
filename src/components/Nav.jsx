@@ -51,7 +51,7 @@ const Nav = () => {
                 {navmenu.map((obj) =>(
                    <Link key={obj.id} to={obj.link}> <li className='h3'>{obj.link}</li> </Link> 
                 ))}
-                   <li className='h3'><CgProfile size={45}/></li>
+                <Link to='/loginsignin'><li className='h3'><CgProfile size={45}/></li></Link>
             </ul>
         )}
    </div>
