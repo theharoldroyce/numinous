@@ -24,6 +24,28 @@ import Type from './assets/band/a5.jpg'
 import Rep from './assets/band/a6.jpg'
 import Sky from './assets/band/a4.jpg'
 
+export const navmenu =[
+  {
+      id: 1,
+      link:'event'
+    },
+  {
+      id: 2,
+      link:'artist'
+    },
+  {
+      id: 3,
+      link:'merch'
+    },
+  {
+      id: 4,
+      link:'about'
+    },
+  {
+      id: 5,
+      link:'contact'
+    },
+]
 export  const shirts = [
     {
       id: 1,

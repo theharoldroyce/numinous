@@ -45,7 +45,8 @@ const Nav = () => {
         <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 md:hidden'>
            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
-
+        
+       
         {nav && (
             <ul className='navmobile'>
                 {navmenu.map((obj) =>(
@@ -54,6 +55,8 @@ const Nav = () => {
                 <Link to='/loginsignin'><li className='h3'><CgProfile size={45}/></li></Link>
             </ul>
         )}
+        
+
    </div>
 
   )
