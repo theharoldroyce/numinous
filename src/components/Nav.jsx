@@ -4,6 +4,7 @@ import Logo from '../assets/logo.jpg'
 import { FaBars, FaTimes } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 
+
 const Nav = () => {
     const [nav, setNav] = useState(false);
     const navmenu =[
@@ -41,6 +42,7 @@ const Nav = () => {
            ))}
            <Link to='/loginsignin'><li className='h2'><CgProfile size={30}/></li></Link>
         </ul>
+
 
         <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 md:hidden'>
            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
